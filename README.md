@@ -1,3 +1,7 @@
+Here's the improved and formatted version of your README:
+
+---
+
 # hello-k8s
 
 ## Overview
@@ -30,57 +34,52 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
    ```bash
    docker build -t hello-k8s .
    ```
-   ![Screenshot 2024-11-15 at 17 47 34](https://github.com/user-attachments/assets/81e5c919-d226-4505-addc-e8567616df96)
+   **Screenshot**:  
+   ![Building the Docker image](https://github.com/user-attachments/assets/81e5c919-d226-4505-addc-e8567616df96)
 
+---
 
-2. **Run three instances** of the application using Docker compose :
+2. **Run three instances** of the application using Docker Compose:
 
-   ```bash
-   # version: '3'
+   ```yaml
+   version: '3'
 
-# services:
-#   app1:
-#     build:
-#       context: .
-#     # image: hello-k8s
-#     environment:
-#       - APP_NAME=hello-k8s-app1
-#     ports:
-#       - '3001:3000'
+   services:
+     app1:
+       build:
+         context: .
+       environment:
+         - APP_NAME=hello-k8s-app1
+       ports:
+         - '3001:3000'
 
-#   app2:
-#     build:
-#       context: .
-#     # image: hello-k8s
-#     environment:
-#       - APP_NAME=hello-k8s-app2
-#     ports:
-#       - '3002:3000'
+     app2:
+       build:
+         context: .
+       environment:
+         - APP_NAME=hello-k8s-app2
+       ports:
+         - '3002:3000'
 
-#   app3:
-#     build:
-#       context: .
-#     # image: hello-k8s
-#     environment:
-#       - APP_NAME=hello-k8s-app3
-#     ports:
-#       - '3003:3000'
+     app3:
+       build:
+         context: .
+       environment:
+         - APP_NAME=hello-k8s-app3
+       ports:
+         - '3003:3000'
    ```
 
+   **Screenshots**:
+   ![Screenshot 2024-11-19 at 17 15 49](https://github.com/user-attachments/assets/e11fbe11-fd41-431b-a8d4-7e8bbc0cfc53)
+  ![Screenshot 2024-11-19 at 17 16 00](https://github.com/user-attachments/assets/b95eb7cd-cf38-4498-9e67-b544adf5da9f)
+  ![Screenshot 2024-11-19 at 17 16 11](https://github.com/user-attachments/assets/c182e1a4-2ecd-4082-8aec-875e1908d158)
 
+---
 
-
-
-
-![Screenshot 2024-11-19 at 17 20 56](https://github.com/user-attachments/assets/cf6d507c-c955-4d42-9d8b-2fa0947d5da8)
-
-![Screenshot 2024-11-19 at 17 21 15](https://github.com/user-attachments/assets/58c16ad9-0723-4753-9e9b-abaa0590458c)
-
-
-3. **Test each instance**:
+3. **Test each instance** with an updated nginx image  :
 
    - Access:
-
      - `http://localhost:3001/app1`
      - `http://localhost:3002/app2`
      - `http://localhost:3003/app3`
@@ -88,18 +87,16 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
    - Verify functionality.
 
    **Screenshots**:
-
-   - ![App running on instance 1](https://github.com/user-attachments/assets/e6172d24-d7a1-4b4f-b766-31524128fdd6)
-   - ![App running on instance 2](https://github.com/user-attachments/assets/7e28bfe7-0464-45c7-826b-82917d025543)
-   - ![App running on instance 3](https://github.com/user-attachments/assets/dba43f9f-3de9-4721-8dc5-6a24b6f1ceed)
-
+   
+  
+ 
 ---
 
-### 3. Use NGINX to Serve the Application
+### 3. implemented Reveresed proxy for NGINX to Serve the Application
 
-1. Create an NGINX configuration to serve the three instances.  
-   Example `nginx.conf`:
+1. Create an NGINX configuration to serve the three instances:  
 
+   **Example `nginx.conf`:**
    ```nginx
    worker_processes auto;
    events {
@@ -134,7 +131,7 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
 
 ---
 
-### . Fully Configure Reverse Proxy with Docker Compose
+### 4. Fully Configure Reverse Proxy with Docker Compose
 
 1. Update `docker-compose.yml` to include NGINX and the three application instances:
 
@@ -191,11 +188,17 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
 3. Access the application via `http://localhost/` to confirm it's working through the reverse proxy.
 
    - Refresh the page multiple times to verify load balancing. Each refresh serves a response from a different instance.
-![Screenshot 2024-11-19 at 21 40 41](https://github.com/user-attachments/assets/1858f277-ac24-42c5-9221-85d55418fb6f)
 
+   **Screenshot**:  
+   ![Load-balanced response](https://github.com/user-attachments/assets/1858f277-ac24-42c5-9221-85d55418fb6f)
 
-   **Screenshots**:
+---
 
- 
+### Next Steps
 
-<!-- need ssl certificate for make it secured  -->
+- **Add SSL Certificates**: Secure your application by configuring SSL using tools like Let's Encrypt.  
+- **Deploy to Kubernetes**: Scale the setup further by deploying to a Kubernetes cluster.
+
+--- 
+
+This updated README now clearly showcases the process and includes the necessary images for better understanding. Let me know if you need additional changes!
