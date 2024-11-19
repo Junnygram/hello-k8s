@@ -30,14 +30,52 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
    ```bash
    docker build -t hello-k8s .
    ```
+   ![Screenshot 2024-11-15 at 17 47 34](https://github.com/user-attachments/assets/81e5c919-d226-4505-addc-e8567616df96)
 
-2. **Run three instances** of the application using Docker:
+
+2. **Run three instances** of the application using Docker compose :
 
    ```bash
-   docker run -d -p 3001:3000 hello-k8s
-   docker run -d -p 3002:3000 hello-k8s
-   docker run -d -p 3003:3000 hello-k8s
+   # version: '3'
+
+# services:
+#   app1:
+#     build:
+#       context: .
+#     # image: hello-k8s
+#     environment:
+#       - APP_NAME=hello-k8s-app1
+#     ports:
+#       - '3001:3000'
+
+#   app2:
+#     build:
+#       context: .
+#     # image: hello-k8s
+#     environment:
+#       - APP_NAME=hello-k8s-app2
+#     ports:
+#       - '3002:3000'
+
+#   app3:
+#     build:
+#       context: .
+#     # image: hello-k8s
+#     environment:
+#       - APP_NAME=hello-k8s-app3
+#     ports:
+#       - '3003:3000'
    ```
+
+
+
+
+
+
+![Screenshot 2024-11-19 at 17 20 56](https://github.com/user-attachments/assets/cf6d507c-c955-4d42-9d8b-2fa0947d5da8)
+
+![Screenshot 2024-11-19 at 17 21 15](https://github.com/user-attachments/assets/58c16ad9-0723-4753-9e9b-abaa0590458c)
+
 
 3. **Test each instance**:
 
@@ -96,7 +134,7 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
 
 ---
 
-### 4. Fully Configure Reverse Proxy with Docker Compose
+### . Fully Configure Reverse Proxy with Docker Compose
 
 1. Update `docker-compose.yml` to include NGINX and the three application instances:
 
@@ -153,11 +191,11 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
 3. Access the application via `http://localhost/` to confirm it's working through the reverse proxy.
 
    - Refresh the page multiple times to verify load balancing. Each refresh serves a response from a different instance.
+![Screenshot 2024-11-19 at 21 40 41](https://github.com/user-attachments/assets/1858f277-ac24-42c5-9221-85d55418fb6f)
+
 
    **Screenshots**:
 
-   - ![App response from instance 1](https://github.com/user-attachments/assets/1a7fc011-d51b-4da7-81ca-bb1519c7564e)
-   - ![App response from instance 2](https://github.com/user-attachments/assets/187e1296-5cb0-4b7c-8a7f-b1f3b1f7d4f5)
-   - ![App response from instance 3](https://github.com/user-attachments/assets/213a7dde-a81e-45fd-af64-4ce51d5d33aa)
+ 
 
 <!-- need ssl certificate for make it secured  -->
