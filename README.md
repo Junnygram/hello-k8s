@@ -1,4 +1,3 @@
-Here's the improved and formatted version of your README:
 
 ---
 
@@ -23,7 +22,7 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
    - Access the application locally to confirm functionality.
 
    **Screenshot**:  
-   ![Screenshot showing the application running locally](https://github.com/user-attachments/assets/a53adbe3-3093-4cb1-bdc3-a46aa9cb06c6)
+![Screenshot 2024-11-15 at 13 45 28](https://github.com/user-attachments/assets/b75a3aad-7e99-4664-8a0a-d3275517ad36)
 
 ---
 
@@ -125,9 +124,11 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
 2. Test NGINX by integrating it with Docker Compose.
 
 **Screenshot**:  
-![NGINX serving multiple instances](https://github.com/user-attachments/assets/213a7dde-a81e-45fd-af64-4ce51d5d33aa)
+![Screenshot 2024-11-19 at 17 20 56](https://github.com/user-attachments/assets/a15dad27-aea9-44f6-9c81-2d0bd63af94c)
+![Screenshot 2024-11-19 at 17 21 15](https://github.com/user-attachments/assets/dfd287a7-b4e5-42ca-98fc-9789f48df719)
 
 ---
+
 
 ### 4. Fully Configure Reverse Proxy with Docker Compose
 
@@ -187,14 +188,18 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
 
    - Refresh the page multiple times to verify load balancing. Each refresh serves a response from a different instance.
 
-   **Screenshot**:  
+   **Screenshot**:
+
+   ![Screenshot 2024-11-19 at 21 40 41](https://github.com/user-attachments/assets/5aa2b4c7-682b-4dda-ae55-1e24974eef18)
+
+   ![NGINX serving multiple instances](https://github.com/user-attachments/assets/213a7dde-a81e-45fd-af64-4ce51d5d33aa)
+
    ![Load-balanced response](https://github.com/user-attachments/assets/1858f277-ac24-42c5-9221-85d55418fb6f)
 
 ---
 
 ### Next Steps
 
-- **Add SSL Certificates**: Secure your application by configuring SSL using tools like Let's Encrypt.  
 - **Deploy to Kubernetes**: Scale the setup further by deploying to a Kubernetes cluster.
 
 --- 
