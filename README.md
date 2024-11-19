@@ -70,11 +70,6 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
          - '3003:3000'
    ```
 
-   **Screenshots**:
-   ![Screenshot 2024-11-19 at 17 15 49](https://github.com/user-attachments/assets/e11fbe11-fd41-431b-a8d4-7e8bbc0cfc53)
-  ![Screenshot 2024-11-19 at 17 16 00](https://github.com/user-attachments/assets/b95eb7cd-cf38-4498-9e67-b544adf5da9f)
-  ![Screenshot 2024-11-19 at 17 16 11](https://github.com/user-attachments/assets/c182e1a4-2ecd-4082-8aec-875e1908d158)
-
 ---
 
 3. **Test each instance** with an updated nginx image  :
@@ -87,6 +82,9 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
    - Verify functionality.
 
    **Screenshots**:
+    ![Screenshot 2024-11-19 at 17 15 49](https://github.com/user-attachments/assets/e11fbe11-fd41-431b-a8d4-7e8bbc0cfc53)
+  ![Screenshot 2024-11-19 at 17 16 00](https://github.com/user-attachments/assets/b95eb7cd-cf38-4498-9e67-b544adf5da9f)
+  ![Screenshot 2024-11-19 at 17 16 11](https://github.com/user-attachments/assets/c182e1a4-2ecd-4082-8aec-875e1908d158)
    
   
  
