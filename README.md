@@ -6,6 +6,12 @@
 
 - Set up the project by following the initialization steps.
 - Run the app locally to test the basic functionality.
+![Screenshot 2024-11-19 at 17 21 15](https://github.com/user-attachments/assets/e6172d24-d7a1-4b4f-b766-31524128fdd6)
+![Screenshot 2024-11-19 at 17 20 56](https://github.com/user-attachments/assets/7e28bfe7-0464-45c7-826b-82917d025543)
+![Screenshot 2024-11-19 at 17 20 37](https://github.com/user-attachments/assets/dba43f9f-3de9-4721-8dc5-6a24b6f1ceed)
+![Screenshot 2024-11-19 at 21 40 44](https://github.com/user-attachments/assets/213a7dde-a81e-45fd-af64-4ce51d5d33aa)
+![Screenshot 2024-11-19 at 21 40 41](https://github.com/user-attachments/assets/187e1296-5cb0-4b7c-8a7f-b1f3b1f7d4f5)
+![Screenshot 2024-11-19 at 21 40 34](https://github.com/user-attachments/assets/1a7fc011-d51b-4da7-81ca-bb1519c7564e)
 
 ---
 
