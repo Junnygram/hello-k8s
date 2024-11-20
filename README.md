@@ -22,19 +22,22 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
    - Access the application locally to confirm functionality.
 
    **Screenshot**:  
-![Screenshot 2024-11-15 at 13 45 28](https://github.com/user-attachments/assets/b75a3aad-7e99-4664-8a0a-d3275517ad36)
+![Screenshot 2024-11-20 at 05 33 23](https://github.com/user-attachments/assets/6b22fa29-16d0-43a3-8769-6639dd20cc37)
 
+In the developer tools, it indicates that the application is currently powered by Express. We'll be implementing an NGINX reverse proxy at a later stage.
 ---
 
 ### 2. Dockerize the Application
 
-1. **Build the Docker image**:
+1. **Build the Docker image** and run test:
 
    ```bash
    docker build -t hello-k8s .
+   docker run -d -p 3000:3000 hello-k8s
+
    ```
    **Screenshot**:  
-   ![Building the Docker image](https://github.com/user-attachments/assets/81e5c919-d226-4505-addc-e8567616df96)
+![Screenshot 2024-11-20 at 05 14 29](https://github.com/user-attachments/assets/64d2874e-3978-43f8-9171-dc72de881848)
 
 ---
 
@@ -81,13 +84,16 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
    - Verify functionality.
 
    **Screenshots**:
-    ![Screenshot 2024-11-19 at 17 15 49](https://github.com/user-attachments/assets/e11fbe11-fd41-431b-a8d4-7e8bbc0cfc53)
-  ![Screenshot 2024-11-19 at 17 16 00](https://github.com/user-attachments/assets/b95eb7cd-cf38-4498-9e67-b544adf5da9f)
-  ![Screenshot 2024-11-19 at 17 16 11](https://github.com/user-attachments/assets/c182e1a4-2ecd-4082-8aec-875e1908d158)
-   
-  
- 
+![Screenshot 2024-11-19 at 21 37 25](https://github.com/user-attachments/assets/05074395-7868-4b74-bc52-1668ac8519f4)
+
+ ![Screenshot 2024-11-19 at 21 37 29](https://github.com/user-attachments/assets/80e6c566-7e67-47ed-b3f6-514c32e56e17)
+![Screenshot 2024-11-19 at 21 37 32](https://github.com/user-attachments/assets/b330012f-9a19-465c-a91e-93a41ed2d9fa)
+
+
+
 ---
+
+
 
 ### 3. implemented Reveresed proxy for NGINX to Serve the Application
 
