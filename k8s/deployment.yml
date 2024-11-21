@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: actions-app
-          image: IMAGE_PLACEHOLDER
+          image: 307946680662.dkr.ecr.us-east-1.amazonaws.com/actions-cicd:latest
           ports:
             - containerPort: 3000
