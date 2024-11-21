@@ -35,3 +35,7 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t ${{ github.sha}} .
+
+      # Trivy Scan
+      - name: Trivy Scan
+        run: docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image actions-app:${{ github.sha}}
