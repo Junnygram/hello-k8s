@@ -38,4 +38,4 @@ jobs:
 
       # Trivy Scan
       - name: Trivy Scan
-        run: docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image actions-app:${{ github.sha}}
+        run: docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:latest image ${{ github.sha}}
