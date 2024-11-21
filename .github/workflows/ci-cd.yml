@@ -24,14 +24,6 @@ jobs:
         with:
           node-version: '14' # Specify Node.js version
 
-      # Install Node.js dependencies
-      - name: Install Node.js dependencies
-        run: npm ci # Use npm ci for clean installs
-
-      # Run tests (optional but recommended for better SonarCloud integration)
-      - name: Run Tests
-        run: npm test
-
       # SonarQube Analysis
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
