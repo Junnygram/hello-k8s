@@ -30,3 +30,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Required for PR integration
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }} # SonarCloud authentication token
+
+      # Docker Image Build
+      - name: Build Docker Image
+        run: |
+          docker build -t ${{ github.sha}} .
