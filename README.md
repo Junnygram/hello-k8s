@@ -1,12 +1,9 @@
-
 ---
-
 # hello-k8s
 
 ## Overview
 
 The `hello-k8s` project demonstrates creating, containerizing, and reverse proxying a microservices application. The setup ensures secure and efficient load balancing using NGINX. This guide details the steps from local testing to fully configuring the reverse proxy.
-
 ---
 
 ## Steps to Set Up and Test
@@ -22,10 +19,9 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
    - Access the application locally to confirm functionality.
 
    **Screenshot**:  
-![Screenshot 2024-11-20 at 05 33 23](https://github.com/user-attachments/assets/6b22fa29-16d0-43a3-8769-6639dd20cc37)
+   ![Screenshot 2024-11-20 at 05 33 23](https://github.com/user-attachments/assets/6b22fa29-16d0-43a3-8769-6639dd20cc37)
 
-In the developer tools, it indicates that the application is currently powered by Express. We'll be implementing an NGINX reverse proxy at a later stage.
----
+## In the developer tools, it indicates that the application is currently powered by Express. We'll be implementing an NGINX reverse proxy at a later stage.
 
 ### 2. Dockerize the Application
 
@@ -36,8 +32,9 @@ In the developer tools, it indicates that the application is currently powered b
    docker run -d -p 3000:3000 hello-k8s
 
    ```
+
    **Screenshot**:  
-![Screenshot 2024-11-20 at 05 14 29](https://github.com/user-attachments/assets/64d2874e-3978-43f8-9171-dc72de881848)
+   ![Screenshot 2024-11-20 at 05 14 29](https://github.com/user-attachments/assets/64d2874e-3978-43f8-9171-dc72de881848)
 
 ---
 
@@ -74,9 +71,10 @@ In the developer tools, it indicates that the application is currently powered b
 
 ---
 
-3. **Test each instance** with an updated nginx image  :
+3. **Test each instance** with an updated nginx image :
 
    - Access:
+
      - `http://localhost:3001/app1`
      - `http://localhost:3002/app2`
      - `http://localhost:3003/app3`
@@ -84,22 +82,19 @@ In the developer tools, it indicates that the application is currently powered b
    - Verify functionality.
 
    **Screenshots**:
-![Screenshot 2024-11-19 at 21 37 25](https://github.com/user-attachments/assets/05074395-7868-4b74-bc52-1668ac8519f4)
+   ![Screenshot 2024-11-19 at 21 37 25](https://github.com/user-attachments/assets/05074395-7868-4b74-bc52-1668ac8519f4)
 
- ![Screenshot 2024-11-19 at 21 37 29](https://github.com/user-attachments/assets/80e6c566-7e67-47ed-b3f6-514c32e56e17)
+![Screenshot 2024-11-19 at 21 37 29](https://github.com/user-attachments/assets/80e6c566-7e67-47ed-b3f6-514c32e56e17)
 ![Screenshot 2024-11-19 at 21 37 32](https://github.com/user-attachments/assets/b330012f-9a19-465c-a91e-93a41ed2d9fa)
-
-
 
 ---
 
-
-
 ### 3. implemented Reveresed proxy for NGINX to Serve the Application
 
-1. Create an NGINX configuration to serve the three instances:  
+1. Create an NGINX configuration to serve the three instances:
 
    **Example `nginx.conf`:**
+
    ```nginx
    worker_processes auto;
    events {
@@ -134,7 +129,6 @@ In the developer tools, it indicates that the application is currently powered b
 ![Screenshot 2024-11-19 at 17 21 15](https://github.com/user-attachments/assets/dfd287a7-b4e5-42ca-98fc-9789f48df719)
 
 ---
-
 
 ### 4. Fully Configure Reverse Proxy with Docker Compose
 
@@ -208,6 +202,8 @@ In the developer tools, it indicates that the application is currently powered b
 
 - **Deploy to Kubernetes**: Scale the setup further by deploying to a Kubernetes cluster.
 
---- 
+---
 
 This updated README now clearly showcases the process and includes the necessary images for better understanding. Let me know if you need additional changes!
+
+Lets proceed with eks deployment [k8.md](https://github.com/Junnygram/hello-k8s/blob/main/k8.md) file.
