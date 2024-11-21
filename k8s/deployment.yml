@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: actions-app-deployment
+  labels:
+    app: actions-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: actions-app
+  template:
+    metadata:
+      labels:
+        app: actions-app
+    spec:
+      containers:
+        - name: actions-app
+          image: IMAGE_PLACEHOLDER
+          ports:
+            - containerPort: 3000
