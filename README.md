@@ -200,10 +200,7 @@ The `hello-k8s` project demonstrates creating, containerizing, and reverse proxy
 
 ### Next Steps
 
-- **Deploy to Kubernetes**: Scale the setup further by deploying to a Kubernetes cluster.
 
----
+- **Deploy to Kubernetes**:
+  Lets proceed with eks deployment [k8.md](https://github.com/Junnygram/hello-k8s/blob/main/k8.md) file.
 
-This updated README now clearly showcases the process and includes the necessary images for better understanding. Let me know if you need additional changes!
-
-Lets proceed with eks deployment [k8.md](https://github.com/Junnygram/hello-k8s/blob/main/k8.md) file.
